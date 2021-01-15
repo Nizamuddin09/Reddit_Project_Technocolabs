@@ -1,0 +1,81 @@
+<html>
+<title>Predicting Score for Reddit post </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+.jumbotron {
+    color: rgb(255, 0, 0);
+    padding: 90px 25px;
+}
+.bg{
+  background-image: url("https://images.wallpaperscraft.com/image/pier_uncertainty_fog_black-and-white_60788_1680x1050.jpg");
+
+/* Full height */
+height: 100%; 
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.container-fluid {
+    padding: 10px 300px;
+}
+.navbar {
+    margin-bottom: 0;
+    background-color: #000000;
+    z-index: 9999;
+    border: 0;
+    font-size: 14px !important;
+    line-height: 5 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #000000     !important;
+    background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+.boxed {
+	background: grey;
+	width: fit-content;
+	padding: 15px 30px;
+	border-radius: 10px;
+}
+.bg-grey {
+    background-color: #f1f1f1;
+}
+</style>
+
+<body>
+  <div class="bg">
+  <div class="jumbotron text-center">
+    <h1>Reddit Post Popularity Score</h1>
+  </div>
+
+<div class="container-fluid">
+  <h5>Enter the Reddit post URL</h5>
+
+  <form action="/predict" method="post">
+
+		<div class="form-group">
+    <input type="text" class="form-control" id="url" name="url">
+  	</div>
+
+  	<center><button type="submit" class="btn btn-primary">Predict</button></center>
+	</form>
+  <hr>
+  <center><h4 style="color:crimson;">  </h4></center>
+	
+</div>
+<br><br>
+</div>
+</body>
+</html>
